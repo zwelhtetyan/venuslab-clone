@@ -12,9 +12,9 @@ export const GlobalStyles = createGlobalStyle`
         --transition5s: all 0.5s linear;
         --transition7s: all 0.7s linear;
         --transition5sEI: all 0.5s ease-in;
-        --main-padding: 4rem;
-        --mid-padding: 2.5rem;
-        --low-paddiing: 1rem;
+        --main-padding: 60px 4rem;
+        --mid-padding: 60px 2.5rem;
+        --low-paddiing: 60px 1rem;
         --light-gray: #ddd;
         --pale-light: #f4f4f4;
         --pure-light: #eee;
@@ -22,15 +22,15 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     ::-webkit-scrollbar {
-    width: 10px;
+        width: 10px;
     }
 
     ::-webkit-scrollbar-track {
-    background: var(--light-gray);
+        background: var(--light-gray);
     }
 
     ::-webkit-scrollbar-thumb {
-    background: var(--primary);
+        background: var(--primary);
     }
 
     @media screen and (max-width: 768px){

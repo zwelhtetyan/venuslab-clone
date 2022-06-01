@@ -12,6 +12,7 @@ export const Head = styled.header`
     z-index: 9;
     display: flex;
     align-items: center;
+    height: ${({ isScroll }) => isScroll && '80px'};
 
     /* open */
 

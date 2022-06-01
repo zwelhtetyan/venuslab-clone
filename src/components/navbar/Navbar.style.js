@@ -57,7 +57,7 @@ export const Nav = styled.nav`
 `;
 
 export const Logo = styled.img`
-    width: 170px;
+    width: ${({ isScroll }) => (isScroll ? '160px' : '180px')};
     transition: var(--transition5sEI);
     transform: translate(0);
 

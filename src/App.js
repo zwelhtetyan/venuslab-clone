@@ -11,7 +11,7 @@ const App = () => {
         <>
             <ContextWrapper>
                 <GlobalStyles />
-                <Loading />
+                {/* <Loading /> */}
                 <Main />
                 <Layer />
                 <RAQ />
