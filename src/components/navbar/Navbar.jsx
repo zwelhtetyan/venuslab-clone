@@ -8,9 +8,16 @@ import { Logo, Nav } from './Navbar.style';
 const Navbar = ({ isScroll }) => {
     const { isOpen, handleMenuOpen } = useHandleMenu();
 
+    const handleClickLogo = () => {
+        isOpen && handleMenuOpen();
+        window.scrollTo(0, 0);
+    };
+
+    // onClick={isOpen ? handleMenuOpen : null}
+
     return (
         <Nav menuOpen={isOpen}>
-            <Link to={'/'} onClick={isOpen ? handleMenuOpen : null}>
+            <Link to={'/'} onClick={handleClickLogo}>
                 <Logo
                     src='https://venuslab.co/icons/logo.svg'
                     menuOpen={isOpen}

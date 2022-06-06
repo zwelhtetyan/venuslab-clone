@@ -1,10 +1,15 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 const MenuContext = createContext(null);
 
 const ContextWrapper = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isRAQOpen, setIsRAQOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => setIsLoading(false), 6000);
+    }, []);
 
     const handleMenuOpen = (_) => setIsOpen((open) => !open);
 
@@ -15,6 +20,7 @@ const ContextWrapper = ({ children }) => {
         handleMenuOpen,
         isRAQOpen,
         handleRAQOpen,
+        isLoading,
     };
 
     return (

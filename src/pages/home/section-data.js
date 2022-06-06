@@ -1,7 +1,7 @@
 const sectionData = {
     inHouse: {
         bgColor: '#fff',
-        color: '#202020',
+        color: '#333',
         logo: 'https://www.venuslab.co/images/case-study/inhouse-logo.png',
         title: 'In-House',
         subtitle: 'e-commerce, android, ios, web app',

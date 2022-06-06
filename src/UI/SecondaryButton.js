@@ -13,6 +13,7 @@ export const SecondaryButton = styled.button`
     font-size: 0.85em;
     letter-spacing: 2px;
     transition: var(--transition3s);
+    margin-left: auto;
 
     &:hover img {
         transform: translateX(5px);

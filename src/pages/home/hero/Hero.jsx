@@ -1,16 +1,23 @@
-import React from 'react';
-import { MainWrapper } from '../../../UI/MainWrapper';
+import { useHandleMenu } from '../../../context/ContextWrapper';
 
-import { Container, NormalText, SmallText, StrongText } from './Hero.style';
+import {
+    Container,
+    HeroWrapper,
+    NormalText,
+    SmallText,
+    StrongText,
+} from './Hero.style';
 
 const Hero = () => {
+    const { isLoading } = useHandleMenu();
+
     return (
         <Container>
-            <MainWrapper>
+            <HeroWrapper isLoading={isLoading}>
                 <SmallText>Idea to</SmallText>
                 <StrongText>Impact</StrongText>
                 <NormalText>Risk-free mobile and web development</NormalText>
-            </MainWrapper>
+            </HeroWrapper>
         </Container>
     );
 };
