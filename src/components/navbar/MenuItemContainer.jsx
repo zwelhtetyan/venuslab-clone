@@ -17,6 +17,10 @@ const MenuItemContainer = () => {
             : { color: 'var(--white)' };
     };
 
+    const handleClickMenuItem = () => {
+        isOpen && handleMenuOpen();
+    };
+
     const handleClickRAQ = () => {
         isOpen && handleMenuOpen();
         handleRAQOpen();
@@ -24,32 +28,32 @@ const MenuItemContainer = () => {
 
     return (
         <Container className='menu-item-container'>
-            <MenuItem onClick={isOpen ? handleMenuOpen : null}>
-                <NavLink to={'/'} style={activeLink} color='gold'>
+            <MenuItem onClick={handleClickMenuItem}>
+                <NavLink to={'/'} style={activeLink}>
                     Home
                 </NavLink>
             </MenuItem>
-            <MenuItem onClick={isOpen ? handleMenuOpen : null}>
+            <MenuItem onClick={handleClickMenuItem}>
                 <NavLink to={'/about'} style={activeLink}>
                     About
                 </NavLink>
             </MenuItem>
-            <MenuItem onClick={isOpen ? handleMenuOpen : null}>
+            <MenuItem onClick={handleClickMenuItem}>
                 <NavLink to={'/services'} style={activeLink}>
                     Services
                 </NavLink>
             </MenuItem>
-            <MenuItem onClick={isOpen ? handleMenuOpen : null}>
+            <MenuItem onClick={handleClickMenuItem}>
                 <NavLink to={'/portfolios'} style={activeLink}>
                     Portfolios
                 </NavLink>
             </MenuItem>
-            <MenuItem onClick={isOpen ? handleMenuOpen : null}>
+            <MenuItem onClick={handleClickMenuItem}>
                 <NavLink to={'/blog'} style={activeLink}>
                     Blog
                 </NavLink>
             </MenuItem>
-            <MenuItem onClick={isOpen ? handleMenuOpen : null}>
+            <MenuItem onClick={handleClickMenuItem}>
                 <NavLink to={'/contact'} style={activeLink}>
                     Contact
                 </NavLink>

@@ -13,8 +13,6 @@ const Navbar = ({ isScroll }) => {
         window.scrollTo(0, 0);
     };
 
-    // onClick={isOpen ? handleMenuOpen : null}
-
     return (
         <Nav menuOpen={isOpen}>
             <Link to={'/'} onClick={handleClickLogo}>

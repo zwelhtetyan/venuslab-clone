@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import MoreBtn from '../../../components/moreBtn/More';
 import {
@@ -48,6 +48,44 @@ const Section = ({
         ],
     });
 
+    useEffect(() => {
+        if (!entry) return;
+
+        const animateCircle = entry.target.firstElementChild;
+        const animateImg = entry.target.lastElementChild;
+
+        const currentY = entry.boundingClientRect.y;
+        const currentRatio = entry.intersectionRatio;
+        const isIntersecting = entry.isIntersecting;
+
+        let { width, height } = entry.target.getBoundingClientRect();
+        let { width: boxW, height: boxH } = animateImg.getBoundingClientRect();
+
+        let tX = (width / 2 + boxW / 2) * currentRatio;
+        let tY = (height / 2 + boxH / 2) * currentRatio;
+
+        //animate circle
+        animateCircle.style.opacity = currentRatio;
+        animateCircle.style.transform = `scale(${currentRatio})`;
+
+        if (currentY < 0 && isIntersecting) {
+            animateCircle.style.transform = `scale(1)`;
+            animateCircle.style.opacity = '1';
+
+            tX = width / 2 + boxW / 2;
+            tY = height / 2 + boxH / 2;
+        }
+
+        // animate image
+        if (isIntersecting) {
+            if (!imgFirst) {
+                animateImg.style.transform = `translate(-${tX}px, -${tY}px)`;
+            } else {
+                animateImg.style.transform = `translate(${tX}px, -${tY}px)`;
+            }
+        }
+    }, [entry, imgFirst]);
+
     return (
         <HomeSectionContainer clipPath={clipPath} bgColor={bgColor}>
             <SectionWrapper imgFirst={imgFirst}>
@@ -60,7 +98,7 @@ const Section = ({
                 </ContentWrapper>
                 <AnimateItemWrapper ref={ref}>
                     <AnimateCircle circleBg={circleBg} />
-                    <AnimateImg animatedImg={animatedImg} />
+                    <AnimateImg animatedImg={animatedImg} imgFirst={imgFirst} />
                 </AnimateItemWrapper>
             </SectionWrapper>
         </HomeSectionContainer>

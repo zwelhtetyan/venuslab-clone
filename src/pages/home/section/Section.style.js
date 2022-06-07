@@ -23,7 +23,7 @@ export const HomeSectionContainer = styled.section`
     }
 
     @media screen and (max-width: 480px) {
-        padding: 5rem 0 2rem 0;
+        padding: 3rem 0 2rem 0;
     }
 `;
 
@@ -74,6 +74,7 @@ export const AnimateCircle = styled.div`
     height: 330px;
     border-radius: 100%;
     background-image: ${({ circleBg }) => circleBg};
+    transform: scale(0);
 
     @media screen and (max-width: 480px) {
         width: 200px;
@@ -89,6 +90,17 @@ export const AnimateImg = styled.div`
     background-size: 90%;
     background-repeat: no-repeat;
     position: absolute;
+
+    ${({ imgFirst }) =>
+        !imgFirst
+            ? `
+            top: 100%;
+            left: 100%;
+        `
+            : `
+            right: 100%;
+            top: 100%;
+        `}
 
     @media screen and (max-width: 480px) {
         width: 300px;
