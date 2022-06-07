@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Head = styled.header`
     width: 100%;
     height: 150px;
-    background-color: var(--black);
+    background-color: ${({ isScroll, isHome }) =>
+        isScroll && isHome ? '#222D' : 'var(--black)'};
     transition: var(--transition5sEI);
     padding: 0 2rem;
     position: fixed;
@@ -14,14 +15,12 @@ export const Head = styled.header`
     align-items: center;
     height: ${({ isScroll }) => isScroll && '80px'};
 
-    /* open */
-
-    /* height: 100vh;
-    align-items: flex-start; */
-
     @media screen and (max-width: 1000px) {
         align-items: flex-start;
         padding: 0 1rem;
-        ${({ menuOpen }) => (menuOpen ? 'height: 100vh; ' : 'height: 70px; ')};
+        ${({ menuOpen }) =>
+            menuOpen
+                ? 'height: 100vh; background-color: var(--black)'
+                : 'height: 70px; '};
     }
 `;

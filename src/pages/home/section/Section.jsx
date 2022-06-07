@@ -18,6 +18,7 @@ const Section = ({
     imgFirst,
     bgColor,
     color,
+    subtitleColor,
     logo,
     title,
     subtitle,
@@ -92,7 +93,9 @@ const Section = ({
                 <ContentWrapper color={color}>
                     <Logo src={logo} />
                     <Title>{title}</Title>
-                    <SubTitle>{subtitle}</SubTitle>
+                    <SubTitle subtitleColor={subtitleColor}>
+                        {subtitle}
+                    </SubTitle>
                     <Para>{para}</Para>
                     <MoreBtn />
                 </ContentWrapper>

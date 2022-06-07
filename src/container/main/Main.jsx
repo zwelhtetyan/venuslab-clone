@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { MainContainer } from './Main.style';
 import { Home, About, Services, Portfolios, Blog, Contact } from '../../pages';
 import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
 
 const Main = () => {
     return (
@@ -16,6 +17,7 @@ const Main = () => {
                 <Route path='/blog' element={<Blog />} />
                 <Route path='/contact' element={<Contact />} />
             </Routes>
+            <Footer />
         </MainContainer>
     );
 };

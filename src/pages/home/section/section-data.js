@@ -2,6 +2,7 @@ const sectionData = {
     inHouse: {
         bgColor: '#fff',
         color: '#333',
+        subtitleColor: '#333',
         logo: 'https://www.venuslab.co/images/case-study/inhouse-logo.png',
         title: 'In-House',
         subtitle: 'e-commerce, android, ios, web app',
@@ -13,6 +14,7 @@ const sectionData = {
     mdyRum: {
         bgColor: '#202020',
         color: '#fff',
+        subtitleColor: '#ddd',
         logo: 'https://www.venuslab.co/images/case-study/mandalay-rum-logo.png',
         title: 'Mandalay Rum',
         subtitle: 'android, ar, web',
@@ -24,6 +26,7 @@ const sectionData = {
     meePyaTike: {
         bgColor: '#085260',
         color: '#fff',
+        subtitleColor: '#ddd',
         logo: 'https://www.venuslab.co/images/case-study/meepyatike-logo.png',
         title: 'MeePyaTike',
         subtitle: 'website, online forum, ui & ux',
@@ -35,6 +38,7 @@ const sectionData = {
     mApn: {
         bgColor: ' #2EA7D7',
         color: '#fff',
+        subtitleColor: '#ddd',
         logo: 'https://www.venuslab.co/images/case-study/apn-logo.png',
         title: 'MyanmarApn',
         subtitle: 'Internet Service Management Syste',

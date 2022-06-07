@@ -38,7 +38,7 @@ export const SectionWrapper = styled(MainWrapper)`
 
 export const ContentWrapper = styled.div`
     color: ${({ color }) => color};
-    font-size: 17px;
+    font-size: 16px;
     flex: 1;
 `;
 
@@ -46,15 +46,22 @@ export const Logo = styled.img``;
 
 export const Title = styled.h1`
     font-size: 3.5rem;
+
+    @media screen and (max-width: 480px) {
+        font-size: 3rem;
+        line-height: 1;
+    }
 `;
 
 export const SubTitle = styled.small`
     letter-spacing: 2px;
+    color: ${({ subtitleColor }) => subtitleColor};
 `;
 
 export const Para = styled.p`
     margin: 1rem 0 1.7rem 0;
     line-height: 1.4em;
+    word-spacing: 2px;
 `;
 
 export const AnimateItemWrapper = styled.div`
