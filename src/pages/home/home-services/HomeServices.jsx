@@ -25,7 +25,7 @@ const HomeServices = () => {
             <MainWrapper>
                 <Title>what we can do</Title>
                 <Title>for you or your business</Title>
-                <Services servicesData={servicesData} />
+                <Services servicesData={servicesData} paraColor='#eee' />
                 <Label>let's talk</Label>
                 <Desc>
                     Wheather you're interested in working with us or for us,

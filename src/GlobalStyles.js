@@ -48,7 +48,17 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Barlow', sans-serif;
-        scroll-behavior: smooth;
+
+        /* when scrolling a page and link to next page in react router
+            next page already scrolled 
+            // to handle this ==>>
+             window.scrollTo(0,0) , it works but take scroll effect 
+            when scroll-behavior: smooth is on 
+            
+            so => disable scroll-behavior
+        */
+
+        /* scroll-behavior: smooth; */ 
     }
 
     ul {

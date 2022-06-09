@@ -1,0 +1,18 @@
+[
+    {
+        "circleBg": "linear-gradient(-45deg, #230003, #92040E)",
+        "img": "https://venuslab.co/images/case-study/aya/1.png",
+        "logo": "https://venuslab.co/images/case-study/aya/logo-b.png",
+        "title": "AYA Bank Mobile App",
+        "subTitle": "redesign, ui/ux research",
+        "logoWidth": "100px"
+    },
+    {
+        "circleBg": "linear-gradient(-45deg, #0B0B0B, #2F9EB9)",
+        "img": "https://venuslab.co/images/case-study/meepyatike/1.png",
+        "logo": "https://venuslab.co/images/case-study/meepyatike/logo.png",
+        "title": "Mee Pya Tike",
+        "subTitle": "vuejs, socket.io, nodejs, ui / ux",
+        "logoWidth": "50px"
+    }
+]

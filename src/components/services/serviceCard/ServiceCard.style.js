@@ -38,7 +38,7 @@ export const Title = styled.h1`
 export const Para = styled.p`
     font-size: 17px;
     line-height: 1.4em;
-    color: #eee;
+    color: ${({ paraColor }) => paraColor};
     font-weight: 300;
 
     @media screen and (max-width: 480px) {

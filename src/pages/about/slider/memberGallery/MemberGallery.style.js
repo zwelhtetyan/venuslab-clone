@@ -4,6 +4,7 @@ export const GalleryContainer = styled.div`
     height: 550px;
     display: flex;
     width: 2792px;
+    overflow: hidden;
 
     @media screen and (max-width: 480px) {
         height: 500px;
@@ -32,6 +33,12 @@ export const ImgLarge = styled.div`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: 0.5s linear;
+
+    &:hover {
+        transform: scale(1.05);
+        filter: brightness(0.4);
+    }
 `;
 
 export const ImgSmall1 = styled.div`
@@ -41,6 +48,12 @@ export const ImgSmall1 = styled.div`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: 0.5s linear;
+
+    &:hover {
+        transform: scale(1.05);
+        filter: brightness(0.4);
+    }
 `;
 
 export const ImgSmall2 = styled(ImgSmall1)`
