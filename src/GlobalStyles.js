@@ -19,7 +19,11 @@ export const GlobalStyles = createGlobalStyle`
         --pale-light: #f4f4f4;
         --pure-light: #eee;
 
-    }
+    } 
+
+    /* font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow', sans-serif; */
+
 
     ::-webkit-scrollbar {
         width: 10px;
@@ -62,4 +66,6 @@ export const GlobalStyles = createGlobalStyle`
         cursor: pointer;
         background-color: transparent;
     }
+
+
 `;

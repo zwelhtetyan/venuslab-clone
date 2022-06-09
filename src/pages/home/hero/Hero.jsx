@@ -1,23 +1,20 @@
-import { useHandleMenu } from '../../../context/ContextWrapper';
+import AnimateWrapper from '../../../UI/AnimateWrapper';
+import { MainWrapper } from '../../../UI/MainWrapper';
 
-import {
-    Container,
-    HeroWrapper,
-    NormalText,
-    SmallText,
-    StrongText,
-} from './Hero.style';
+import { Container, NormalText, SmallText, StrongText } from './Hero.style';
 
 const Hero = () => {
-    const { isLoading } = useHandleMenu();
-
     return (
         <Container>
-            <HeroWrapper isLoading={isLoading}>
-                <SmallText>Idea to</SmallText>
-                <StrongText>Impact</StrongText>
-                <NormalText>Risk-free mobile and web development</NormalText>
-            </HeroWrapper>
+            <AnimateWrapper delay='0s'>
+                <MainWrapper>
+                    <SmallText>Idea to</SmallText>
+                    <StrongText>Impact</StrongText>
+                    <NormalText>
+                        Risk-free mobile and web development
+                    </NormalText>
+                </MainWrapper>
+            </AnimateWrapper>
         </Container>
     );
 };

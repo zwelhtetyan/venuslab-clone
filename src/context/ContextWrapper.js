@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 
-const MenuContext = createContext(null);
+const MyContext = createContext(null);
 
 const ContextWrapper = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,14 +24,12 @@ const ContextWrapper = ({ children }) => {
     };
 
     return (
-        <MenuContext.Provider value={contextValue}>
-            {children}
-        </MenuContext.Provider>
+        <MyContext.Provider value={contextValue}>{children}</MyContext.Provider>
     );
 };
 
 export default ContextWrapper;
 
-export const useHandleMenu = () => {
-    return useContext(MenuContext);
+export const useAction = () => {
+    return useContext(MyContext);
 };

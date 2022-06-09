@@ -10,7 +10,7 @@ import {
 import Services from '../../../components/services/Services';
 import servicesData from './services.data.json';
 import { ButtonText, PrimaryButton } from '../../../UI/PrimaryButton';
-import { useHandleMenu } from '../../../context/ContextWrapper';
+import { useAction } from '../../../context/ContextWrapper';
 
 const HomeServices = () => {
     const buttonSize = {
@@ -18,7 +18,7 @@ const HomeServices = () => {
         height: '42',
     };
 
-    const { handleRAQOpen } = useHandleMenu();
+    const { handleRAQOpen } = useAction();
 
     return (
         <Container>

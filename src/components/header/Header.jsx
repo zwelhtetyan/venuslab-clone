@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useHandleMenu } from '../../context/ContextWrapper';
+import { useAction } from '../../context/ContextWrapper';
 import Navbar from '../navbar/Navbar';
 import { Head } from './Header.style';
 
 const Header = () => {
-    const { isOpen } = useHandleMenu();
+    const { isOpen } = useAction();
     const [isScroll, setIsScroll] = useState(false);
 
     const location = useLocation();

@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { useHandleMenu } from '../../context/ContextWrapper';
+import { useAction } from '../../context/ContextWrapper';
 import { ButtonText, PrimaryButton } from '../../UI/PrimaryButton';
 import {
     Checkbox,
@@ -24,7 +24,7 @@ import {
 import closeMenuIcon from './x.svg';
 
 const RAQ = () => {
-    const { isRAQOpen, handleRAQOpen } = useHandleMenu();
+    const { isRAQOpen, handleRAQOpen } = useAction();
 
     const buttonSize = {
         width: '180',

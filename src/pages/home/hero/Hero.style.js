@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { MainWrapper } from '../../../UI/MainWrapper';
 
 export const Container = styled.section`
     width: 100%;
@@ -11,18 +10,6 @@ export const Container = styled.section`
 
     @media screen and (max-width: 1000px) {
         clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
-    }
-`;
-
-export const HeroWrapper = styled(MainWrapper)`
-    transform: translateY(20%);
-    animation: animateHero 0.7s forwards;
-    animation-delay: ${({ isLoading }) => (isLoading ? '5s' : '0')};
-
-    @keyframes animateHero {
-        to {
-            transform: translateY(0%);
-        }
     }
 `;
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HamburgerMenu from '../animateHamburgerMenu/HamburgerMenu';
-import { useHandleMenu } from '../../context/ContextWrapper';
+import { useAction } from '../../context/ContextWrapper';
 import MenuItemContainer from './MenuItemContainer';
 import { Logo, Nav } from './Navbar.style';
 
 const Navbar = ({ isScroll }) => {
-    const { isOpen, handleMenuOpen } = useHandleMenu();
+    const { isOpen, handleMenuOpen } = useAction();
 
     const handleClickLogo = () => {
         isOpen && handleMenuOpen();

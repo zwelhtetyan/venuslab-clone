@@ -1,8 +1,8 @@
 import { Line1, Line2, Line3, Menu } from './Hamburger.style';
-import { useHandleMenu } from '../../context/ContextWrapper';
+import { useAction } from '../../context/ContextWrapper';
 
 const HamburgerMenu = () => {
-    const { isOpen, handleMenuOpen } = useHandleMenu();
+    const { isOpen, handleMenuOpen } = useAction();
 
     const animate = {
         animateLine1: 'rotate(45deg) translate(4.5px, 4px);',

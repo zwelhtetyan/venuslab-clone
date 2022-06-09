@@ -1,9 +1,9 @@
 import React from 'react';
-import { useHandleMenu } from '../../context/ContextWrapper';
+import { useAction } from '../../context/ContextWrapper';
 import { OverlayLayer } from './Layer.style';
 
 const Layer = () => {
-    const { isRAQOpen, handleRAQOpen } = useHandleMenu();
+    const { isRAQOpen, handleRAQOpen } = useAction();
 
     return (
         <OverlayLayer

@@ -1,0 +1,52 @@
+[
+    {
+        "brand": "https://venuslab.co/images/clients/apn.png",
+        "borderColor": "#00baed",
+        "title": "myanmar apn"
+    },
+    {
+        "brand": "https://venuslab.co/images/clients/inhouse.png",
+        "borderColor": "#85754e",
+        "title": "in-house"
+    },
+    {
+        "brand": "https://venuslab.co/images/clients/move-move.png",
+        "borderColor": "#219ad6",
+        "title": "move move"
+    },
+    {
+        "brand": "https://venuslab.co/images/clients/meepyatike.png",
+        "borderColor": "#41b9d2",
+        "title": "meepyatike"
+    },
+    {
+        "brand": "https://venuslab.co/images/clients/mmotor.png",
+        "borderColor": "#0062b1",
+        "title": "myanmar morto coporation"
+    },
+    {
+        "brand": "https://venuslab.co/images/clients/medc.png",
+        "borderColor": "#4eb748",
+        "title": "Myanmar Economic Development Coporation"
+    },
+    {
+        "brand": "https://venuslab.co/images/clients/syscon.png",
+        "borderColor": "#2468ff",
+        "title": "SysCon Myanamr"
+    },
+    {
+        "brand": "https://venuslab.co/images/clients/mandalay-rum.png",
+        "borderColor": "#d1a962",
+        "title": "Mandaly RUM"
+    },
+    {
+        "brand": "https://venuslab.co/images/clients/third-eye.png",
+        "borderColor": "#ed2124",
+        "title": "ThirdEye Entertainment & Production"
+    },
+    {
+        "brand": "https://venuslab.co/images/clients/venus-group.png",
+        "borderColor": "#356ca8",
+        "title": "Venus Group of Companies"
+    }
+]

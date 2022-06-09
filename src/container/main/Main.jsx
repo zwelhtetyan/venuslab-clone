@@ -7,18 +7,20 @@ import Footer from '../../components/footer/Footer';
 
 const Main = () => {
     return (
-        <MainContainer>
+        <>
             <Header />
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/services' element={<Services />} />
-                <Route path='/portfolios' element={<Portfolios />} />
-                <Route path='/blog' element={<Blog />} />
-                <Route path='/contact' element={<Contact />} />
-            </Routes>
+            <MainContainer>
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/services' element={<Services />} />
+                    <Route path='/portfolios' element={<Portfolios />} />
+                    <Route path='/blog' element={<Blog />} />
+                    <Route path='/contact' element={<Contact />} />
+                </Routes>
+            </MainContainer>
             <Footer />
-        </MainContainer>
+        </>
     );
 };
 

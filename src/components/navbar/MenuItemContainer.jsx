@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import { useHandleMenu } from '../../context/ContextWrapper';
+import { useAction } from '../../context/ContextWrapper';
 import { ButtonText, PrimaryButton } from '../../UI/PrimaryButton';
 import { Container, MenuItem } from './MenuItemContainer.style';
 
 const MenuItemContainer = () => {
-    const { isOpen, handleMenuOpen, handleRAQOpen } = useHandleMenu();
+    const { isOpen, handleMenuOpen, handleRAQOpen } = useAction();
 
     const buttonSize = {
         width: '180',
@@ -22,6 +22,9 @@ const MenuItemContainer = () => {
     };
 
     const handleClickRAQ = () => {
+        if (window.innerWidth < 1000 && !isOpen) {
+            return;
+        }
         isOpen && handleMenuOpen();
         handleRAQOpen();
     };
