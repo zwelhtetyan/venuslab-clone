@@ -15,6 +15,14 @@ const ContextWrapper = ({ children }) => {
 
     const handleRAQOpen = (_) => setIsRAQOpen((open) => !open);
 
+    useEffect(() => {
+        if (isRAQOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [isRAQOpen]);
+
     const contextValue = {
         isOpen,
         handleMenuOpen,

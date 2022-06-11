@@ -2,11 +2,12 @@ import { useRef, useState } from 'react';
 import { useAction } from '../../context/ContextWrapper';
 import { ButtonText, PrimaryButton } from '../../UI/PrimaryButton';
 import {
+    Input as CustomInput,
+    Textarea as CustomTextarea,
+} from '../../pages/contact/input and textarea';
+import {
     Checkbox,
     Form,
-    Input,
-    InputWrapper,
-    SmallLabel,
     RAQCloseMenu,
     RAQContainer,
     SubTitle,
@@ -16,9 +17,6 @@ import {
     InputWrapperSmall,
     Radio,
     CustomRadio,
-    TextAreaWrapper,
-    Textarea,
-    SmallLabelForTextarea,
     SubmitButtonContainerr,
 } from './RAQ.style';
 import closeMenuIcon from './x.svg';
@@ -63,8 +61,9 @@ const RAQ = () => {
     });
 
     //animate label when lose focus
-    const handleBlur = (key, value) => {
-        setFormData((prevValue) => ({ ...prevValue, [key]: value }));
+    const handleOnBlur = (e, val) => {
+        const { name } = e.target;
+        setFormData((prevData) => ({ ...prevData, [name]: val }));
     };
 
     //handle checkbox
@@ -108,70 +107,51 @@ const RAQ = () => {
                 {/* Who You Are */}
                 <SubTitle>Who you are?</SubTitle>
 
-                <InputWrapper>
-                    <Input
-                        type='text'
-                        ref={nameRef}
-                        name='name'
-                        onBlur={({ target }) =>
-                            handleBlur(target.name, nameRef.current.value)
-                        }
-                    />
-                    <SmallLabel formData={formData.name}>Your name</SmallLabel>
-                </InputWrapper>
-                <InputWrapper>
-                    <Input
-                        type='text'
-                        ref={phoneRef}
-                        name='phone'
-                        onBlur={({ target }) =>
-                            handleBlur(target.name, phoneRef.current.value)
-                        }
-                    />
-                    <SmallLabel formData={formData.phone}>
-                        Your phone number
-                    </SmallLabel>
-                </InputWrapper>
-                <InputWrapper>
-                    <Input
-                        type='email'
-                        ref={emailRef}
-                        name='email'
-                        onBlur={({ target }) =>
-                            handleBlur(target.name, emailRef.current.value)
-                        }
-                    />
-                    <SmallLabel formData={formData.email}>
-                        Your email address
-                    </SmallLabel>
-                </InputWrapper>
+                <CustomInput
+                    type='text'
+                    label='Your name'
+                    refren={nameRef}
+                    name='name'
+                    handleOnBlur={handleOnBlur}
+                    val={formData.name}
+                />
+
+                <CustomInput
+                    type='text'
+                    label='Your phone number'
+                    refren={phoneRef}
+                    name='phone'
+                    handleOnBlur={handleOnBlur}
+                    val={formData.phone}
+                />
+
+                <CustomInput
+                    type='email'
+                    label='Your email address'
+                    refren={emailRef}
+                    name='email'
+                    handleOnBlur={handleOnBlur}
+                    val={formData.email}
+                />
+
                 <SubTitle>What you do?</SubTitle>
-                <InputWrapper>
-                    <Input
-                        type='text'
-                        ref={companyRef}
-                        name='company'
-                        onBlur={({ target }) =>
-                            handleBlur(target.name, companyRef.current.value)
-                        }
-                    />
-                    <SmallLabel formData={formData.company}>
-                        Your company name
-                    </SmallLabel>
-                </InputWrapper>
-                <InputWrapper>
-                    <Input
-                        type='text'
-                        ref={positionRef}
-                        name='position'
-                        onBlur={({ target }) =>
-                            handleBlur(target.name, positionRef.current.value)
-                        }
-                    />
-                    <SmallLabel formData={formData.position}>
-                        Your position
-                    </SmallLabel>
-                </InputWrapper>
+                <CustomInput
+                    type='text'
+                    label='Your company name'
+                    refren={companyRef}
+                    name='company'
+                    handleOnBlur={handleOnBlur}
+                    val={formData.company}
+                />
+
+                <CustomInput
+                    type='text'
+                    label='Your position'
+                    refren={positionRef}
+                    name='position'
+                    handleOnBlur={handleOnBlur}
+                    val={formData.position}
+                />
 
                 {/* What is your project type? */}
                 <SubTitle>What is your project type?</SubTitle>
@@ -226,22 +206,13 @@ const RAQ = () => {
 
                 <SubTitle>Could you explain a bit about your project?</SubTitle>
 
-                <TextAreaWrapper>
-                    <Textarea
-                        type='textarea'
-                        ref={aboutProjectRef}
-                        name='aboutProject'
-                        onBlur={({ target }) =>
-                            handleBlur(
-                                target.name,
-                                aboutProjectRef.current.value
-                            )
-                        }
-                    />
-                    <SmallLabelForTextarea formData={formData.aboutProject}>
-                        Some about your project...
-                    </SmallLabelForTextarea>
-                </TextAreaWrapper>
+                <CustomTextarea
+                    label='Some about your project...'
+                    refren={aboutProjectRef}
+                    name='aboutProject'
+                    handleOnBlur={handleOnBlur}
+                    val={formData.aboutProject}
+                />
 
                 {/* How did you hear about us? (optional) */}
 
