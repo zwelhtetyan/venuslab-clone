@@ -8,7 +8,7 @@ export const BrandCardWrapper = styled.div`
     perspective: 1000px;
     position: relative;
 
-    &:hover div {
+    &:hover > div {
         transform: rotateY(180deg);
         box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
     }
@@ -26,7 +26,7 @@ export const BrandCardInner = styled.div`
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 1.5s;
+    transition: transform 1s;
     transform-style: preserve-3d;
 `;
 
