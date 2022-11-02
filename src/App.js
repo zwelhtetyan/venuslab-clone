@@ -8,18 +8,18 @@ import RAQ from './components/RAQ/RAQ';
 import ScrollToTop from './ScrollToTop';
 
 const App = () => {
-    return (
-        <>
-            <ContextWrapper>
-                <GlobalStyles />
-                <Loading />
-                <Main />
-                <Layer />
-                <RAQ />
-                <ScrollToTop />
-            </ContextWrapper>
-        </>
-    );
+   return (
+      <>
+         <ContextWrapper>
+            <GlobalStyles />
+            <Loading />
+            <Main />
+            <Layer />
+            <RAQ />
+            <ScrollToTop />
+         </ContextWrapper>
+      </>
+   );
 };
 
 export default App;
